@@ -5,7 +5,6 @@ import { Hero } from '../hero';
   templateUrl: './hero-form.component.html',
   styleUrls: ['./hero-form.component.css'],
 })
-
 export class HeroFormComponent {
   powers = ['Really Smart', 'SuperFlexible', 'Super hot', 'Weather changer'];
 
@@ -14,5 +13,9 @@ export class HeroFormComponent {
   submitted = false;
   onSubmit() {
     this.submitted = true;
+  }
+
+  newHero() {
+    this.model = new Hero(42, '', '');
   }
 }
